@@ -18,6 +18,13 @@ header {
     align-items: center;
 }
 
+main article h1 {
+
+    padding: 15px;
+    font-size: 40px;
+
+}
+
 #opening-page h1 {
     padding: 15px;
     font-size: 40px;
@@ -36,4 +43,84 @@ header {
     border-radius: 5px;
     background-color: #5d0081;
     color: white;
+}
+
+.question {
+
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 15px;
+    max-width: 65%;
+    
+}
+
+.button-container {
+
+    display: flex;
+    flex-direction: column;
+    align-self: left;
+}
+
+.answer-button {
+
+    padding: 4px 35px 4px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #5d0081;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 500px;
+
+}
+
+.final-screen {
+
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 15px;
+    max-width: 35%;
+    font-size: 20px;
+}
+
+.final-screen p {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.submit-initials {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: fit-content;
+    margin-bottom: 15px;
+}
+
+.submit-initials p {
+    min-width: fit-content;
+}
+
+.initial-input {
+
+    padding-left: 5px;
+    height: fit-content;
+}
+
+.initial-button {
+
+    padding: 4px 12px 4px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #5d0081;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 500px;
 }
