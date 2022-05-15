@@ -57,6 +57,11 @@ function questionOne(event) {
         
         correctEl.appendChild(correctTextEl);
         mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
     }
 
     else if (element.matches("#btn-q1-a1") || element.matches("#btn-q1-a2") || element.matches("#btn-q1-a4")) {
@@ -69,6 +74,10 @@ function questionOne(event) {
         correctEl.appendChild(correctTextEl);
         mainEl.appendChild(correctEl);
 
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
     }
 
     question2El.addEventListener("click", questionTwo);
@@ -81,7 +90,39 @@ function questionTwo(event) {
     question2El.style.display = "none";
     question3El.style.display = "flex";
 
-    
+    var element = event.target; 
+
+    if (element.matches("#btn-q2-a3")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Correct!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
+    else if (element.matches("#btn-q2-a1") || element.matches("#btn-q2-a2") || element.matches("#btn-q2-a4")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Wrong!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
 
     question3El.addEventListener("click", questionThree);
 
@@ -93,6 +134,40 @@ function questionThree(event) {
     question3El.style.display = "none";
     question4El.style.display = "flex";
 
+    var element = event.target; 
+
+    if (element.matches("#btn-q3-a4")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Correct!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
+    else if (element.matches("#btn-q3-a1") || element.matches("#btn-q3-a2") || element.matches("#btn-q3-a3")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Wrong!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
     question4El.addEventListener("click", questionFour);
 
 }
@@ -103,6 +178,42 @@ function questionFour() {
     question4El.style.display = "none";
     question5El.style.display = "flex";
 
+    var element = event.target; 
+
+    var element = event.target; 
+
+    if (element.matches("#btn-q4-a3")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Correct!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
+    else if (element.matches("#btn-q4-a1") || element.matches("#btn-q4-a2") || element.matches("#btn-q4-a4")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Wrong!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
     question5El.addEventListener("click", questionFive);
 
 }
@@ -111,6 +222,40 @@ function questionFive(event) {
 
     question5El.style.display = "none";
     finalScreenEl.style.display = "flex";
+
+    var element = event.target; 
+
+    if (element.matches("#btn-q5-a4")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Correct!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
+
+    else if (element.matches("#btn-q5-a1") || element.matches("#btn-q5-a2") || element.matches("#btn-q5-a3")) {
+
+        var correctEl = document.createElement("div");
+        var correctTextEl = document.createElement("p");
+        correctTextEl.textContent = "Wrong!"
+        correctEl.setAttribute("class", "correct");
+        
+        correctEl.appendChild(correctTextEl);
+        mainEl.appendChild(correctEl);
+
+        setTimeout(function() {
+
+            correctEl.style.display = "none";
+        }, 3000);
+    }
 
     // Add storage for initials and high score
 
