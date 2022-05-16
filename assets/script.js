@@ -10,6 +10,7 @@ var question3El = document.querySelector("#question3");
 var question4El = document.querySelector("#question4");
 var question5El = document.querySelector("#question5");
 var finalScreenEl = document.querySelector("#final-screen");
+var submitButtonEl = document.querySelector(".initial-button");
 
 var timeLeft = 0;
 
@@ -21,8 +22,26 @@ function startTimer() {
 
     var timeInterval = setInterval(function () {
 
-        timerEl.textContent = "Time:  " + timeLeft;
-        timeLeft--;
+        if (timeLeft >= 0) {
+            timerEl.textContent = "Time:  " + timeLeft;
+            timeLeft--;
+        }
+        else {
+            clearInterval(timeInterval);
+            question1El.style.display = "none";
+            question2El.style.display = "none";
+            question3El.style.display = "none";
+            question4El.style.display = "none";
+            question5El.style.display = "none";
+            finalScreenEl.style.display = "flex";
+        }
+
+        if (finalScreenEl.style.display === "flex") {
+
+            clearInterval(timeInterval);
+            timerEl.textContent = timeLeft;
+        }
+
     }, 1000);
 
 }
@@ -61,7 +80,7 @@ function questionOne(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
     else if (element.matches("#btn-q1-a1") || element.matches("#btn-q1-a2") || element.matches("#btn-q1-a4")) {
@@ -77,7 +96,8 @@ function questionOne(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
+
     }
 
     question2El.addEventListener("click", questionTwo);
@@ -105,7 +125,7 @@ function questionTwo(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
     else if (element.matches("#btn-q2-a1") || element.matches("#btn-q2-a2") || element.matches("#btn-q2-a4")) {
@@ -121,7 +141,8 @@ function questionTwo(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
+
     }
 
     question3El.addEventListener("click", questionThree);
@@ -149,7 +170,7 @@ function questionThree(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
     else if (element.matches("#btn-q3-a1") || element.matches("#btn-q3-a2") || element.matches("#btn-q3-a3")) {
@@ -165,7 +186,8 @@ function questionThree(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
+
     }
 
     question4El.addEventListener("click", questionFour);
@@ -195,7 +217,7 @@ function questionFour() {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
     else if (element.matches("#btn-q4-a1") || element.matches("#btn-q4-a2") || element.matches("#btn-q4-a4")) {
@@ -211,7 +233,8 @@ function questionFour() {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
+
     }
 
     question5El.addEventListener("click", questionFive);
@@ -238,7 +261,7 @@ function questionFive(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
     else if (element.matches("#btn-q5-a1") || element.matches("#btn-q5-a2") || element.matches("#btn-q5-a3")) {
@@ -254,14 +277,29 @@ function questionFive(event) {
         setTimeout(function() {
 
             correctEl.style.display = "none";
-        }, 3000);
+        }, 2000);
     }
 
-    // Add storage for initials and high score
-
+    
+    submitButtonEl.addEventListener("click", saveHighscore);
 }
 
+function saveHighscore() {
 
+    var initials = document.querySelector("#initials");
+    var timeLeft = document.querySelector("#timer");
+
+    var highScore = {
+
+        intials: initials.value,
+        score: timeLeft.textContent
+    };
+
+    localStorage.setItem("highScore", JSON.stringify(highScore));
+
+    console.log(timeLeft.textContent);
+    console.log(highScore);
+}
 
 
 
