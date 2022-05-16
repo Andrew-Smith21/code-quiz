@@ -1,9 +1,11 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Maximize space between two header divs and adds space to the bottom */
 header {
     display: flex;
     justify-content: space-between;
@@ -12,12 +14,14 @@ header {
     margin-bottom: 50px;
 }
 
+/* Aligns title, text, and button vertically and centers them on the page */
 #opening-page {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Styling for titles on all articles */
 main article h1 {
 
     padding: 15px;
@@ -25,17 +29,20 @@ main article h1 {
 
 }
 
+/* Styling for title on opening page */
 #opening-page h1 {
     padding: 15px;
     font-size: 40px;
 }
 
+/* Centering and styling for text on opening page */
 #opening-page p {
     text-align: center;
     font-size: 20px;
     padding: 18px;
 }
 
+/* Styling start quiz button */
 #start-quiz {
     padding: 8px;
     font-size: 20px;
@@ -45,12 +52,13 @@ main article h1 {
     color: white;
 }
 
+/* Changes background color of start quiz button when user hovers on it */
 #start-quiz:hover {
     background-color: #c00197;
 }
 
+/* General styling all questions that start off hidden */
 .question {
-
     display: none;
     flex-direction: column;
     align-items: left;
@@ -59,11 +67,10 @@ main article h1 {
     margin-bottom: 15px;
     max-width: 65%;
     padding-bottom: 10px;
-    
 }
 
+/* Styling for correct/wrong display */
 .correct {
-
     font-style: italic;
     font-size: 20px;
     color: lightslategray;
@@ -74,15 +81,15 @@ main article h1 {
     border-top: solid 1px lightslategray;
 }
 
+/* Aligning answers of quiz questions vertically and left side of parent div */
 .button-container {
-
     display: flex;
     flex-direction: column;
     align-self: left;
 }
 
+/* General styling for all answer buttons */
 .answer-button {
-
     padding: 4px 0 4px 10px;
     border-radius: 5px;
     font-size: 20px;
@@ -92,16 +99,15 @@ main article h1 {
     margin-left: 20px;
     margin-right: 580px;
     margin-bottom: 5px;
-
 }
 
+/* Changes background color of answer buttons when user hovers on them */
 .answer-button:hover {
-
     background-color: #c00197;
 }
 
+/* Styling for final screen; makes child elements vertical */
 .final-screen {
-
     display: none;
     flex-direction: column;
     align-items: left;
@@ -112,13 +118,14 @@ main article h1 {
     font-size: 20px;
 }
 
+/* Adds space around text on the final screen */
 .final-screen p {
     padding-top: 15px;
     padding-bottom: 10px;
 }
 
+/* Makes content on final screen align in a row */
 .submit-initials {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -126,18 +133,19 @@ main article h1 {
     margin-bottom: 15px;
 }
 
+/* Ensures individual content does not wrap on final screen */
 .submit-initials p {
     min-width: fit-content;
 }
 
+/* Sets size of text input box */
 .initial-input {
-
     padding-left: 5px;
     height: fit-content;
 }
 
+/* Styles button to submit highscore on final screen */
 .initial-button {
-
     padding: 4px 12px 4px 12px;
     border-radius: 5px;
     font-size: 15px;
@@ -148,6 +156,7 @@ main article h1 {
     margin-right: 500px;
 }
 
+/* Changes background color of submit highscore button on final screen */
 .initial-button:hover {
     background-color: #c00197;
 }
