@@ -1,6 +1,6 @@
 # Code Quiz
 
-![Code Quiz Screenshot](/code-quiz/assets/images/code-quiz-screenshot.jpg?raw=true)
+![Code Quiz Screenshot](/assets/images/code-quiz-screenshot.jpg?raw=true)
 
 ## Assignment
 Build a code quiz application with the ability to save high scores to local storage.
