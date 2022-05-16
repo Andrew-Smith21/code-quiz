@@ -1,8 +1,9 @@
-
 // Defining variables 
 var mainEl = document.querySelector("#main");
 var startquizEl = document.querySelector("#start-quiz");
 var timerEl = document.querySelector("#timer");
+
+// Varibles to use for showing and hiding quiz questions, first and last pages
 var openingpageEl = document.querySelector("#opening-page");
 var question1El = document.querySelector("#question1");
 var question2El = document.querySelector("#question2");
@@ -12,13 +13,54 @@ var question5El = document.querySelector("#question5");
 var finalScreenEl = document.querySelector("#final-screen");
 var submitButtonEl = document.querySelector(".initial-button");
 
-var timeLeft = 0;
+var question1answer1El = document.querySelector("#btn-q1-a1");
+var question1answer2El = document.querySelector("#btn-q1-a2");
+var question1answer4El = document.querySelector("#btn-q1-a4");
 
+var question2answer1El = document.querySelector("#btn-q2-a1");
+var question2answer2El = document.querySelector("#btn-q2-a2");
+var question2answer4El = document.querySelector("#btn-q2-a4");
+
+var question3answer1El = document.querySelector("#btn-q3-a1");
+var question3answer2El = document.querySelector("#btn-q3-a2");
+var question3answer3El = document.querySelector("#btn-q3-a3");
+
+var question4answer1El = document.querySelector("#btn-q4-a1");
+var question4answer2El = document.querySelector("#btn-q4-a2");
+var question4answer4El = document.querySelector("#btn-q4-a4");
+
+var question5answer1El = document.querySelector("#btn-q5-a1");
+var question5answer2El = document.querySelector("#btn-q5-a2");
+var question5answer3El = document.querySelector("#btn-q5-a3");
+
+
+
+var timeLeft = 0;
 
 // Function to start the timer
 function startTimer() {
 
     var timeLeft = 75;
+
+    question1answer1El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question1answer2El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question1answer4El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+
+    question2answer1El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question2answer2El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question2answer4El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+
+    question3answer1El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question3answer2El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question3answer3El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+
+    question4answer1El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question4answer2El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question4answer4El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+
+    question5answer1El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question5answer2El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
+    question5answer3El.addEventListener("click", function() {timeLeft = timeLeft - 10;});
 
     var timeInterval = setInterval(function () {
 
@@ -97,7 +139,6 @@ function questionOne(event) {
 
             correctEl.style.display = "none";
         }, 2000);
-
     }
 
     question2El.addEventListener("click", questionTwo);
@@ -142,7 +183,6 @@ function questionTwo(event) {
 
             correctEl.style.display = "none";
         }, 2000);
-
     }
 
     question3El.addEventListener("click", questionThree);
@@ -195,7 +235,7 @@ function questionThree(event) {
 }
 
 // Fuction to remove q4 and show q5 when q4 is answered
-function questionFour() {
+function questionFour(event) {
 
     question4El.style.display = "none";
     question5El.style.display = "flex";
@@ -238,7 +278,6 @@ function questionFour() {
     }
 
     question5El.addEventListener("click", questionFive);
-
 }
 
 function questionFive(event) {
@@ -296,14 +335,7 @@ function saveHighscore() {
     };
 
     localStorage.setItem("highScore", JSON.stringify(highScore));
-
-    console.log(timeLeft.textContent);
-    console.log(highScore);
 }
-
-
-
-
 
 // Start Quiz Button Click
 startquizEl.addEventListener("click", startQuiz);
