@@ -1,3 +1,4 @@
+<!-- Standard html5 setup -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,111 +8,111 @@
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
-    
-    <header class="header">
+<!-- End of head section -->
 
+<body>
+
+    <!-- Beginning of header section -->
+    <header class="header">
         <div>
             <p>View high scores</p>
         </div>
-
         <div>
             <p id="timer">Time: 0</p>
         </div>
-
     </header>
+    <!-- End of header section -->
 
+    <!-- Beginning of main content section -->
     <main id="main">
 
+        <!-- Beginning of Opening Page section -->
         <article id="opening-page">
             <h1>Coding Quiz Challenge</h1>
-
             <p>
                 Try to answer the following code-related questions within the time limit. <br>
                 Keep in mind that incorrect answers will penalize your score/time by ten seconds!
             </p>
-
-        <button id="start-quiz">
-            Start Quiz
-        </button>
+            <button id="start-quiz">
+                Start Quiz
+            </button>
         </article>
+        <!-- End of Opeing Page section -->
 
+        <!-- Beginning of Question 1 section -->
         <article class ="question" id="question1">
             <h1>
                 Commonly used data types DO NOT include:
             </h1>
-
             <div class="button-container">
                 <button class="answer-button" id="btn-q1-a1">1. strings</button>
                 <button class="answer-button" id="btn-q1-a2">2. booleans</button>
                 <button class="answer-button" id="btn-q1-a3">3. alerts</button>
                 <button class="answer-button" id="btn-q1-a4">4. numbers</button>
             </div>
-            
         </article>
+        <!-- End of Question 1 section -->
 
+        <!-- Beginning of Question 2 section -->
         <article class="question" id="question2">
             <h1>
                 The condition in an if/else statement is enclosed with ________.
             </h1>
-
             <div class="button-container">
                 <button class="answer-button" id="btn-q2-a1">1. quotes</button>
                 <button class="answer-button" id="btn-q2-a2">2. curly brackets</button>
                 <button class="answer-button" id="btn-q2-a3">3. parentheses</button>
                 <button class="answer-button" id="btn-q2-a4">4. square brackets</button>
             </div>
-            
         </article>
+        <!-- End of Question 2 section -->
 
+        <!-- Beginning of Question 3 section -->
         <article class="question" id="question3">
             <h1>
                 Arrays in Javascript can be used to store ________.
             </h1>
-
             <div class="button-container">
                 <button class="answer-button" id="btn-q3-a1">1. numbers and strings</button>
                 <button class="answer-button" id="btn-q3-a2">2. other arrays</button>
                 <button class="answer-button" id="btn-q3-a3">3. booleans</button>
                 <button class="answer-button" id="btn-q3-a4">4. all of the above</button>
             </div>
-            
         </article>
+        <!-- End of Question 3 section -->
 
+        <!-- Beginning of Question 4 section -->
         <article class="question" id="question4">
             <h1>
                 String values must be enclosed within _______ when being assigned to variables.
             </h1>
-
             <div class="button-container">
                 <button class="answer-button" id="btn-q4-a1">1. commas</button>
                 <button class="answer-button" id="btn-q4-a2">2. curly brackets</button>
                 <button class="answer-button" id="btn-q4-a3">3. quotes</button>
                 <button class="answer-button" id="btn-q4-a4">4. parentheses</button>
             </div>
-            
         </article>
+        <!-- End of Question 4 section -->
 
+        <!-- Beginning of Question 5 section -->
         <article class="question" id="question5">
             <h1>
                 A very useful tool during development and debugging for printing content to the debugger is:
             </h1>
-
             <div class="button-container">
                 <button class="answer-button" id="btn-q5-a1">1. Javascript</button>
                 <button class="answer-button" id="btn-q5-a2">2. terminal/bash</button>
                 <button class="answer-button" id="btn-q5-a3">3. for loops</button>
                 <button class="answer-button" id="btn-q5-a4">4. console.log</button>
             </div>
-            
         </article>
+        <!-- End of Question 5 section -->
 
+        <!-- Beginning of Final Screen section -->
         <article class="final-screen" id="final-screen">
-
             <h2>All Done!</h2>
-
             <p>Your final score is __.</p>
-
             <div class="submit-initials">
                 <p>
                     Enter initials:
@@ -123,17 +124,12 @@
                     Submit
                 </button>
             </div>
-
         </article>
-
+        <!-- End of Final Screen section -->
     </main>
+    <!-- End of main content section -->
 
-
-
-
-
-
-
+    <!-- Linking javascript file -->
     <script src="./assets/script.js"></script>
 </body>
 </html>
